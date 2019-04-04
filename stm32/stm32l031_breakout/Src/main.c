@@ -92,7 +92,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
-
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_SET);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -100,10 +101,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
 	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
 	HAL_Delay(500);
 
-    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
